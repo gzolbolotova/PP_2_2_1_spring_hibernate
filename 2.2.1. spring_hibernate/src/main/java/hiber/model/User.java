@@ -8,13 +8,14 @@ import javax.persistence.*;
 @Table(name = "users")
 public class User {
 
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
-
    @OneToOne
    @MapsId
-   public Car car;
+   @JoinColumn(name = "id")
+   private Car car;
+   @Id
+   @Column(name = "id")
+   private Long id;
+
 
    @Column(name = "name")
    private String firstName;
@@ -66,10 +67,12 @@ public class User {
       this.email = email;
    }
 
-   public Car getCar(){
+   public Car getCar() {
       return car;
    }
-   public void setCar(Car car){
+
+   public void setCar(Car car) {
       this.car = car;
    }
+
 }

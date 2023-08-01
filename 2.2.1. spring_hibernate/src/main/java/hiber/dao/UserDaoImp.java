@@ -34,7 +34,7 @@ public class UserDaoImp implements UserDao {
               "JOIN u.car c WHERE c.model = :model AND c.series = :series", User.class);
       typedQuery.setParameter("model", model);
       typedQuery.setParameter("series", series);
-      return (User) typedQuery;
+      return typedQuery.getSingleResult();
    }
 
 }
