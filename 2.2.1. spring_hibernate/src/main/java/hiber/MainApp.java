@@ -40,8 +40,9 @@ public class MainApp {
          System.out.println();
       }
 
-      User user = userService.getByModelSeries("Volkswagen", 155244946);
-      System.out.println(user.getId() + user.getFirstName() + user.getLastName() + user.getEmail());
+      User user = userService.getByModelSeries("Volkswagen", 155246);
+      System.out.println("Id = " + user.getId() + ", Firs name = " + user.getFirstName()
+              + ", Last name = " + user.getLastName() + ", Email = "  + user.getEmail());
 
       context.close();
    }

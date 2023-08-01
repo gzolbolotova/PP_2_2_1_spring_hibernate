@@ -19,7 +19,7 @@ public class Car {
     @Column(name = "model")
     private String model;
 
-    @Column(name = "series", unique = true)
+    @Column(name = "series")
     private int series;
 
 
